@@ -1,0 +1,10 @@
+<div class="cart-item">
+  <span>id:{{ cartItem.id }}</span><br>
+  <span>userId: {{ cartItem.userId }}</span><br>
+  <b>Products</b>
+  <div *ngFor="let item of cartItem.products" >
+  <span>Product id:{{item.productId}}</span> 
+  <span style="padding-left: 10px;">Quantity:{{item.quantity}}</span> 
+  </div>
+  <button style="float: right"class="btn btn-primary" (click)="deleteCartItem(cartItem.id)">Delete</button>
+</div>
